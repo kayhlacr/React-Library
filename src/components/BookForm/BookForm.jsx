@@ -17,7 +17,6 @@ export default function BookForm({ onFormSubmissionHandler }) {
           className="form-input"
           onChange={(event) => {
             const value = event.target.value;
-
             setId(value);
           }}
         />
