@@ -1,4 +1,5 @@
-function Book({ title, author, description, coverImage }) {
+import "./Book.css";
+function Book({ title, author, description, coverImage, onDelete }) {
   return (
     <div className="book">
       <img src={coverImage} alt={title} className="book-cover" />
@@ -9,6 +10,7 @@ function Book({ title, author, description, coverImage }) {
           <strong>Description:</strong> {description}
         </p>
       </div>
+      <button onClick={onDelete}>Delete</button>
     </div>
   );
 }
