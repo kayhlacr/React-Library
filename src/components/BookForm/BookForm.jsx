@@ -1,26 +1,31 @@
 import { useState } from "react";
 import "./BookForm.css";
+import { nanoid } from "nanoid";
 
 export default function BookForm({ onFormSubmissionHandler }) {
-  const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [genre, setGenre] = useState("");
   const [description, setDescription] = useState("");
   const [coverImage, setCoverImage] = useState("");
+
+  const handleFormSubmission = (event) => {
+    event.preventDefault();
+    const newBookId = nanoid();
+    console.log("New Book ID:", newBookId);
+    const newBook = {
+      id: newBookId,
+      title,
+      author,
+      genre,
+      description,
+      coverImage,
+    };
+    onFormSubmissionHandler(newBook);
+  };
+
   return (
-    <form className="form-container">
-      <label>
-        ID:{""}
-        <input
-          type="text"
-          className="form-input"
-          onChange={(event) => {
-            const value = event.target.value;
-            setId(value);
-          }}
-        />
-      </label>
+    <form className="form-container" onSubmit={handleFormSubmission}>
       <label>
         Title:{""}
         <input
@@ -76,22 +81,7 @@ export default function BookForm({ onFormSubmissionHandler }) {
           }}
         />
       </label>
-      <button
-        className="form-button"
-        type="submit"
-        onClick={(event) => {
-          event.preventDefault();
-          const newBook = {
-            id,
-            title,
-            author,
-            genre,
-            description,
-            coverImage,
-          };
-          onFormSubmissionHandler(newBook);
-        }}
-      >
+      <button className="form-button" type="submit">
         Create Book
       </button>
     </form>
