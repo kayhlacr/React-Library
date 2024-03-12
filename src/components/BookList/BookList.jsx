@@ -11,9 +11,7 @@ export default function BookList({ books, onDelete }) {
           author={book.author}
           description={book.description}
           coverImage={book.coverImage}
-          onDelete={() => {
-            onDelete(book.id);
-          }}
+          onDelete={() => onDelete(book.id)}
         />
       ))}
     </div>

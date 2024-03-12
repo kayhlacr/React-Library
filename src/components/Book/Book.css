@@ -1,3 +1,8 @@
+.book {
+  background-color: white;
+  border-radius: 1rem;
+}
+
 .book button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -7,7 +12,6 @@
   color: #fff;
   background: linear-gradient(45deg, #d8d6e0, #b6ab56);
   border: solid white;
-  border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
