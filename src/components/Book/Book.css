@@ -14,4 +14,11 @@
   border: solid white;
   cursor: pointer;
   transition: background 0.3s ease;
+  border-radius: 1rem;
+  display: grid;
+}
+
+.book-cover {
+  height: 275px;
+  border-radius: 1rem;
 }
