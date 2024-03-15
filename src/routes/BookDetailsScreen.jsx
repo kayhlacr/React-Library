@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import allBooks from "../booksData";
+import "./BookDetailsScreen.css";
 
 export default function BookDetailsScreen() {
   const { id } = useParams();
