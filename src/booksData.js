@@ -37,7 +37,7 @@ const allBooks = [
     description:
       "Set in a future Chicago where society is divided into factions based on personality traits, this series follows protagonist Tris as she navigates a society filled with secrets and dangers.",
     coverImage:
-      "https://target.scene7.com/is/image/Target/GUEST_d41c4a36-94f2-4af9-a55c-914b0dd2b85f?wid=600&hei=600&qlt=80&fmt=webp",
+      "https://m.media-amazon.com/images/I/91bxBYl307L._AC_UF1000,1000_QL80_.jpg",
   },
   {
     id: 5,
@@ -88,7 +88,7 @@ const allBooks = [
     description:
       "A chilling exploration of Israel Keyes, one of the most disturbing serial killers in recent memory.",
     coverImage:
-      "https://target.scene7.com/is/image/Target/GUEST_5b700003-68a8-446a-86e6-292eb3665513?wid=488&hei=488&fmt=pjpeg",
+      "https://m.media-amazon.com/images/I/81n7MjZ2MYL._AC_UF1000,1000_QL80_.jpg",
   },
   {
     id: 10,
@@ -138,7 +138,7 @@ const allBooks = [
     description:
       "Investigates the case of the Grim Sleeper, a serial killer who terrorized South Central Los Angeles for decades before being apprehended.",
     coverImage:
-      "https://i5.walmartimages.com/seo/The-Grim-Sleeper-The-Lost-Women-of-South-Central-Paperback-9781640090231_d47e6614-5aed-4452-bce9-e8b395446b14.392ae39d8282e855aaf0847b5d38b4a8.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+      "https://m.media-amazon.com/images/I/816+o-qAyZL._AC_UF1000,1000_QL80_.jpg",
   },
 ];
 
