@@ -1,12 +1,17 @@
 import "./BookList.css";
 import Book from "../Book/Book";
 
-export default function BookList({ books, onDelete }) {
+export default function BookList({ books, genre, onDelete }) {
+  const filteredBooks = genre
+    ? books.filter((book) => book.genre === genre)
+    : books;
+
   return (
     <div className="book-list">
-      {books.map((book) => (
+      {filteredBooks.map((book) => (
         <Book
           key={book.id}
+          id={book.id}
           title={book.title}
           author={book.author}
           description={book.description}

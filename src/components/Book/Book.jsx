@@ -1,8 +1,12 @@
 import "./Book.css";
-function Book({ title, author, description, coverImage, onDelete }) {
+import { Link } from "react-router-dom";
+
+function Book({ id, title, author, description, coverImage, onDelete }) {
   return (
     <div className="book">
-      <img src={coverImage} alt={title} className="book-cover" />
+      <Link to={`/bookDetails/${id}`}>
+        <img src={coverImage} alt={title} className="book-cover" />
+      </Link>
       <div className="book-details">
         <h2>{title}</h2>
         <h3>By: {author}</h3>
