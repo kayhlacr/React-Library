@@ -21,6 +21,17 @@ function App() {
   };
 
   const isHomePage = location.pathname === "/";
+
+  const handleSearch = (event) => {
+    const keyword = event.target.value.toLowerCase();
+    const filteredBooks = allBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(keyword) ||
+        book.author.toLowerCase().includes(keyword)
+    );
+    setBooks(filteredBooks);
+  };
+
   return (
     <>
       <nav className="navigation">
@@ -35,6 +46,12 @@ function App() {
             <NavLink to="/genreTwo">Genre 2</NavLink>
           </li>
         </ul>
+        <input
+          type="text"
+          placeholder="Search For Book..."
+          className="search-bar"
+          onChange={handleSearch}
+        />
         <button
           onClick={() => {
             navigate(pageRoutes);
