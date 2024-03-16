@@ -40,10 +40,10 @@ function App() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/genreOne">Genre 1</NavLink>
+            <NavLink to="/genreOne">Science Fiction</NavLink>
           </li>
           <li>
-            <NavLink to="/genreTwo">Genre 2</NavLink>
+            <NavLink to="/genreTwo">True Crime</NavLink>
           </li>
         </ul>
         <input
