@@ -1,7 +1,7 @@
 import "./Book.css";
 import { Link } from "react-router-dom";
 
-function Book({ id, title, author, description, coverImage, onDelete }) {
+function Book({ id, title, coverImage, onDelete }) {
   return (
     <div className="book">
       <Link to={`/bookDetails/${id}`}>
@@ -9,10 +9,6 @@ function Book({ id, title, author, description, coverImage, onDelete }) {
       </Link>
       <div className="book-details">
         <h2>{title}</h2>
-        <h3>By: {author}</h3>
-        <p>
-          <strong>Description:</strong> {description}
-        </p>
       </div>
       <button onClick={onDelete}>Delete</button>
     </div>
