@@ -7,3 +7,18 @@
   max-width: 600px;
   padding: 20px;
 }
+
+.genre-two-container .book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 60px;
+  justify-items: center;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
