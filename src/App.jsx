@@ -1,3 +1,4 @@
+// App.jsx
 import { useState } from "react";
 import "./App.css";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
@@ -13,6 +14,7 @@ function App() {
   const [books, setBooks] = useState(allBooks);
   const navigate = useNavigate();
   const pageRoutes = ["/", "/genreOne", "/genreTwo"];
+
   const handleDelete = (id) => {
     const deletedBook = books.find((book) => book.id === id);
     console.log("Deleted Book ID:", deletedBook.id);
@@ -76,8 +78,15 @@ function App() {
           }
         />
         <Route path="/" element={<Home />} />
-        <Route path="/genreOne" element={<GenreOne />} />
-        <Route path="/genreTwo" element={<GenreTwo />} />
+
+        <Route
+          path="/genreOne"
+          element={<GenreOne books={books} setBooks={setBooks} />}
+        />
+        <Route
+          path="/genreTwo"
+          element={<GenreTwo books={books} setBooks={setBooks} />}
+        />
         <Route
           path="/bookDetails/:id"
           element={<BookDetailsScreen isBookDetailsPage={true} />}
